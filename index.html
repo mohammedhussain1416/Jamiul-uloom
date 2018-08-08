@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>madrasa-e-jamiululoom</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .header {
+    background-color: #2d2d30;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 32px;
+    text-align: center;
+	margin: 40px 0px 0px;
+}
+    
+body{
+	background-color: #1abc9c;
+	background-image: url("ghg.jpg");
+}
+
+    /* Add a dark background color with a little bit see-through */ 
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+    
+    #hafizname {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: lightblue;
+    }
+
+#hafizname td, #hafizname th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#hafizname tr:nth-child(even){background-color: #f2f2f2;}
+
+#hafizname tr:hover {background-color: #ddd;}
+
+#hafizname th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.bg1{
+  background-color: lightblue;
+  color: #ff0000;
+}
+.bg2{
+  background-color: #474e5d;
+  color: #ffffff;
+}
+.logo-sm{
+	color: #FF4081;
+	font-size: 50px;
+}
+.carousel-inner img{
+	width: 100%; 
+	margin: auto;
+}
+.carousel-caption{
+	color: #FF4081;
+}
+@madia (max-width: 600px){
+	.carousel-caption{
+		display: none;
+
+	}
+}
+.ul {
+    background: #3399ff;
+    padding: 20px;
+}
+.ulli {
+    background: #cce5ff;
+    margin: 5px;
+}
+
+/* Add a dark background color to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: gold;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<h3 class="header">Madrasa-e-Jamiul Uloom                            مدرسہ جامع العلوم، آمبور</h3>
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">JAMIUL-ULOOM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li onclick="document.getElementById('alumni').style.display='block'"><a href="#alumni">ALUMNI</a></li>
+        
+        <li onclick="document.getElementById('contact').style.display='block'"><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#feature">FEATURES</a></li>
+            <li><a href="#contact">COMMENT</a></li>
+            <li><a href="#bais">B.A Islamic Studies</a></li>  
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+        <li id="myBtn"><a href="#signnup">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="signnup" class="container" >
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+<div id="home">
+	<div id="mycarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#mycarousel" data-slide-to="1"></li>
+			<li data-target="#mycarousel" data-slide-to="2"></li>
+		</ol>
+
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="jq2.jpg" alt="admin" width="1200" height="700">
+				<div class="carousel-caption">
+					<h3>Jamiya Masjid</h3>
+					<p>the atmosphere in masjid of ambur</p>
+				</div>
+			</div>
+			
+			
+			<div class="item">
+				<img src="jq3.jpg" alt="admin" width="1200" height="700">
+				<div class="carousel-caption">
+					<h3>Jamiya Masjid</h3>
+					<p>the atmosphere in masjid of ambur</p>
+				</div>
+			</div>
+			
+			<div class="item">
+				<img src="jq1.jpg" alt="admin" width="1200" height="700">
+				<div class="carousel-caption">
+					<h3>Jamiya Masjid</h3>
+					<p>the atmosphere in masjid of ambur</p>
+				</div>
+			</div>
+
+		</div>
+		<a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>previous</a>
+		
+		<a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>next</a>
+
+	</div>
+</div>
+
+<div id="about" class="container" >
+	<h3>JAMIULULOOM,AMBUR.                             مدرسہ جامع العلوم، آمبور</h3>
+	<p class="bg1">The Madrasa-e-Jamiul Uloom Ambur (Urdu: مدرسہ جامع العلوم، آمبور‎) is the Islamic Institute which imparts Hifz of Holy Quran to the college and higher secondary students. It is located at Ambur, a town in Vellore district of Tamil Nadu, India. It was founded on 7 May 1998 (Thursday) after asar prayer by Hazrat Aqdas Moulana Qari Habeeb Ahmed Sahib, Hazrat Moulana Obaidullah Asadi Sahib, Hazrat Moulana Gulam Mohammed Wastanvi Sahib, Maulana Mufti Salahuddin Sahib Qasmi and several prominent Islamic scholars (Ulema).</p>
+  <p class="bg2"> Mufti Salahuddin Sahib Qasmi is the principal of the Madrasa, and Natharsa Mohamed Sayeed Sahib is the correspondent of the Madrasa and Natharsa Nazimuddin sahib is the secretary of this madarsa. And Hafiz Niyaz Sahib, Hafiz Sayeed Sahib and Moulvi abdul qadeer Sahib are the teachers of the Madrasa.</p>
+  <p>Followings are the <a target="_blank" href="#alumni">"ALUMNI"</a> link. Students who graduated from Hifz of Holy Qur'an.</p>
+  <p><b>Details at a glance:-</b></p>
+
+  <div class="table-responsive">
+  <table class="table table-striped table-hover" id="hafizname">
+<tr class="success">
+<th  style="padding-right:0.65em;">Type</th>
+<td>Islamic Madrasa</td>
+</tr>
+<tr class="success">
+<th style="padding-right:0.65em;">Established</th>
+<td>7 May 1998</td>
+</tr>
+<tr class="success">
+<th  style="padding-right:0.65em;">Principal</th>
+<td>Mufti Salahuddin Sahib Qasmi</td>
+</tr>
+<tr class="success">
+<th  style="padding-right:0.65em;">
+<div style="padding:0.1em 0;line-height:1.2em;">Administrative staff</div>
+</th>
+<td>Hafiz Niyaz Ahmed Sb &amp; Hafiz Sayeed Ahmed Sb.</td>
+</tr>
+<tr class="success">
+<th  style="padding-right:0.65em;">Address</th>
+<td><span>Jamia Masjid Ambur, Vellore Dist.</span>, <span><a href="https://en.wikipedia.org/wiki/Ambur" title="Ambur">Ambur</a></span>, <span><a href="https://en.wikipedia.org/wiki/Tamil_Nadu" title="Tamil Nadu">Tamil Nadu</a></span>, <span><a href="https://en.wikipedia.org/wiki/India" title="India">India</a></span></td>
+</tr>
+</table>
+</div>
+
+</div>
+<div id="alumni" class="container-fluid" style="display:none">
+<h2 class="text-primary">Followings are the ALUMNI Students who graduated from Hifz of Holy Qur'an.</h2>
+<marquee><h3>limited sites are available hurry up</h3>
+</marquee>
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-hover" id="hafizname">
+<thead>
+<tr class="success">
+<th>Name</th>
+<th>Guardian</th>
+<th>Area</th>
+<th>Degree</th>
+<th>Graduated Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hafiz Moulvi Ehtishamul Haq</td>
+<td>Palli Ghazali Sahib</td>
+<td>Chowk Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Science_in_Information_Technology" title="Master of Science in Information Technology">M.C.A</a></td>
+<td>21.10.2001</td>
+</tr>
+<tr>
+<td>Hafiz Owais Ahmed</td>
+<td>Peshimam Riyaz Ahmed Sahib</td>
+<td>Big Mosque</td>
+<td>M.B.M</td>
+<td>21.10.2001</td>
+</tr>
+<tr>
+<td>Hafiz Moulvi Mufti Misbahullah</td>
+<td>Jalal Niyamatullah Sahib</td>
+<td>Small Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/SSLC" title="SSLC">S.S.L.C</a></td>
+<td>21.10.2001</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Salman</td>
+<td>Hazrath Hafiz Moulana Gulzar Ahmed Sahib</td>
+<td>Small Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Business_Administration" title="Master of Business Administration">M.B.A</a></td>
+<td>12.09.2004</td>
+</tr>
+<tr>
+<td>Hafiz Thufail Ahmed</td>
+<td>Mastan Abdus Salam Sahib</td>
+<td>Small Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Science_in_Information_Technology" title="Master of Science in Information Technology">M.S.C</a>, M.Phil, B.Ed</td>
+<td>12.09.2004</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Raihan</td>
+<td>Papaguppam Mohammed Usman Sahib</td>
+<td>Big Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Business_Administration" title="Bachelor of Business Administration">B.B.A</a></td>
+<td>12.09.2004</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Mukarram</td>
+<td>Nanamunna Fazlur Rahman Sahib</td>
+<td>Fathima Mosque</td>
+<td>B.A (C.S)</td>
+<td>12.09.2004</td>
+</tr>
+<tr>
+<td>Hafiz Shafeeque Ahmed</td>
+<td>Polur Abdullah Basha Sahib</td>
+<td>Azad Nagar</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Computer_Science" title="Bachelor of Computer Science">B.Sc</a></td>
+<td>12.09.2004</td>
+</tr>
+<tr>
+<td>Hafiz Rayees Ahmed</td>
+<td>Qadi Rafeeque Ahmed Sahib</td>
+<td>Mohamed Pura</td>
+<td><a href="https://en.wikipedia.org/wiki/SSLC" title="SSLC">S.S.L.C</a></td>
+<td>12.09.2004</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Abrar</td>
+<td>Naikar Tayyib Basha Sahib</td>
+<td>Khaderpet</td>
+<td><a href="https://en.wikipedia.org/wiki/SSLC" title="SSLC">S.S.L.C</a></td>
+<td>03.08.2008</td>
+</tr>
+<tr>
+<td>Hafiz Aftab Aalam</td>
+<td>Aarkat Abdul Qadar Sahib</td>
+<td>Neelifield</td>
+<td>B.E</td>
+<td>03.08.2008</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Zakwan</td>
+<td>Cherangal Ahmed Basha Sahib</td>
+<td>Masjid-e-Quba</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Commerce" title="Bachelor of Commerce">B.Com</a></td>
+<td>03.08.2008</td>
+</tr>
+<tr>
+<td>Hafiz Amanullah</td>
+<td>Kadekar Dawood Basha Sahib</td>
+<td>Masjid-e-Quba</td>
+<td>B.A (C.S)</td>
+<td>03.08.2008</td>
+</tr>
+<tr>
+<td>Hafiz Azeezur Rahman</td>
+<td>Moule Habeebur Rahman Sahib</td>
+<td>Neelifield</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Business_Administration" title="Bachelor of Business Administration">B.B.A</a></td>
+<td>03.08.2008</td>
+</tr>
+<tr>
+<td>Hafiz Fuzail Ahmed</td>
+<td>Mastan Abdus Salam Sahib</td>
+<td>Small Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/SSLC" title="SSLC">S.S.L.C</a></td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Shaghil</td>
+<td>Hasanbhai Shakeel Ahmed Sahib</td>
+<td>Azad Nagar</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Commerce" title="Bachelor of Commerce">B.Com</a>(Computer Applications)</td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Azeem</td>
+<td>Hazrath Moulana Qazi Shafee Sahib</td>
+<td>Pernambut</td>
+<td><a href="https://en.wikipedia.org/wiki/SSLC" title="SSLC">S.S.L.C</a></td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Khizar</td>
+<td>Choraye Abdur Rasheed Sahib</td>
+<td>Mohammed Pura</td>
+<td>H.S.C</td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Ashfaque Ahmed</td>
+<td>Mandiya Abdul Lateef Sahib</td>
+<td>Neelifield</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Arts" title="Master of Arts">M.S.C</a>, M.Phil, B.Ed</td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Niyaz Ahmed</td>
+<td>Alangayam Abul Aala Sahib</td>
+<td>Noorullahpet</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Commerce" title="Master of Commerce">M.Com</a>, M.Phil</td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Aleemur Rahman</td>
+<td>Ahmed Basha Sahib</td>
+<td>Big Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Commerce" title="Master of Commerce">M.Com</a></td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Muzakkir</td>
+<td>Ayyapillai Kamaluddin Sahib</td>
+<td>Big Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Computer_Application" title="Bachelor of Computer Application">B.C.A</a></td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Mudassir</td>
+<td>Sulaiman Zafrullah Sahib</td>
+<td>Fathima Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/SSLC" title="SSLC">S.S.L.C</a></td>
+<td>11.12.2011</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Samman</td>
+<td>Pakeersa Atheeque Ahmed Sahib</td>
+<td>Kangartakya</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Computer_Science" title="Bachelor of Computer Science">B.Sc</a></td>
+<td>26.10.2014</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Hassan</td>
+<td>Kuchikar Ameenur Rahman Sahib</td>
+<td>Big Mosque</td>
+<td><a href="https://en.wikipedia.org/wiki/Master_of_Business_Administration" title="Master of Business Administration">M.B.A</a></td>
+<td>26.10.2014</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Zafar</td>
+<td>Jalal Ziyaullah Sahib</td>
+<td>Masjid-e-Quba</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Computer_Science" title="Bachelor of Computer Science">B.Sc</a></td>
+<td>26.10.2014</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Faizan</td>
+<td>Chiya Sayeed Ahmed Sahib</td>
+<td>Kangartakya</td>
+<td><a href="https://en.wikipedia.org/wiki/Bachelor_of_Commerce" title="Bachelor of Commerce">B.Com</a></td>
+<td>26.10.2014</td>
+</tr>
+<tr>
+<td>Hafiz Mohammed Nowman</td>
+<td>Chiya Sayeed Ahmed Sahib</td>
+<td>Kangartakya</td>
+<td>H.S.C</td>
+<td>26.10.2014</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="bais" class="container">
+	<h3>Madrasa-e-Jamiul Uloom,B.A.I.S Program</h3>
+	<p class="bg1">We at Jamiul uloom are happy to inform you that we are about to launch a special bachelors program (Graduation in Islamic Studies). It is a five years course where a student can learn Aqeedah, Quran, Hadeeth, Fiqh, Tafseer, Arabic, etc., along convention subjects like Accounts, Economics, Commerce, Computer Science, Psychology, etc., This course will be equivalent to any other bachelors program(B.A.). After completing this course a student will be eligible to other masters program like M.B.A, M.A., etc.,</p>
+	<br>
+	<h3>program highlights</h3>
+	<ul class="ul">
+		<li class="ulli">5 years Aalimiyat Program</li>
+		<li class="ulli">English and Urdu Medium</li>
+		<li class="ulli">Career Oriented Program</li>
+		<li class="ulli">Course material similar to BA Programs of Darul uloom Deoband, Mazahirul uloom Saharanpur (Darse Nizami)</li>
+		<li class="ulli">Adherence to the Quran and Sunnah</li>
+		<li class="ulli">Proficient faculty members from Darul uloom Deoband</li>
+		<li class="ulli">Arabic Language taught intensively</li>
+	</ul>
+</div>
+
+<div id="feature" class="container-fluid text-center" >
+	<h2>features</h2>
+	<h4>what we offer to students</h4>
+	<div class="row">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-wrench logo-sm"></span>
+			<h4>HARD WORK</h4>
+			<P>To make a ability to do good work</P>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-heart logo-sm"></span>
+			<h4>LOVE</h4>
+			<P>To make a ability to talk</P>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-certificate logo-sm"></span>
+			<h4>CERTIFIED</h4>
+			<P>To make an icon in world</P>
+		</div>
+		
+	</div>
+	
+</div>
+
+<div id="contact" class="container" style="display:none">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
+  <div class="row test">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Ambur,Tamilnadu,India</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91 9629531464</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: tmdh1416@yahoo.com</p> 
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div>
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>&copy; Copyright 2018 Jamiululoom,Jamia Masjid,Ambur</p>
+  <p>Bootstrap Theme Made By <a data-toggle="tooltip" title="Contact MOHAMMED HUSSAIN">MOHAMMED HUSSAIN THADEY</a></p> 
+</footer>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip(); 
+})
+</script>
+
+</body>
+</html>
